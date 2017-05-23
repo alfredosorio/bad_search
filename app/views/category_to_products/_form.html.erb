@@ -1,0 +1,17 @@
+<%= form_with(model: category_to_product, local: true) do |form| %>
+  <% if category_to_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category_to_product.errors.count, "error") %> prohibited this category_to_product from being saved:</h2>
+
+      <ul>
+      <% category_to_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

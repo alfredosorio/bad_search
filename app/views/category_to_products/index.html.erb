@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Category To Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @category_to_products.each do |category_to_product| %>
+      <tr>
+        <td><%= link_to 'Show', category_to_product %></td>
+        <td><%= link_to 'Edit', edit_category_to_product_path(category_to_product) %></td>
+        <td><%= link_to 'Destroy', category_to_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category To Product', new_category_to_product_path %>
